@@ -1,0 +1,18 @@
+Package: GeneralizedLambda
+Type: Package
+Title: The Generalized Lambda Distribution
+Version: 0.1-0
+Date: 2016-06-07
+Author: Jeong Kim <jkim831@aucklanduni.ac.nz>
+Maintainer: David Scott <d.scott@auckland.ac.nz>
+Depends: R (>= 3.0.0)
+Encoding: latin1
+Description: This package provides functions for multiple versions
+	     (commonly wrongly called parameterisations) of the generalized
+	     lambda distribution. Functions are provided (or will be) for the
+	     density function, distribution function, quantile function and
+	     for random number generation. Code has been drawn from a number
+	     of existing packages and reformatted to agree with the style of
+	     the packages GeneralizedHyperbolic, NormalLaplace,
+	     VarianceGamma and SkewHyperbolic.
+License: GPL (>= 2)
