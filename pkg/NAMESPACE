@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+useDynLib(GeneralizedLambda,
+          gl_fmkl_distfunc,
+          gl_rs_distfunc,
+          gl_fm5_distfunc)
