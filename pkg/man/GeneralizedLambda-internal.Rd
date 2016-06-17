@@ -13,6 +13,7 @@
 \alias{glCheckParsFMKL5}
 \alias{glCheckParsErrorMessage}
 \alias{rgl}
+\alias{pgl}
 
 
 \title{Internal Generalized Lambda Functions}
