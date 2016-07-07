@@ -4,7 +4,7 @@ qgl <- function(p, lambda1, lambda2, lambda3, lambda4,
                 lower.tail = TRUE)
 {
   if (lower.tail == FALSE) {
-    p <- 1-p
+    p <- 1 - p
   }
 
   ## Check the parameters
@@ -27,7 +27,7 @@ qgl <- function(p, lambda1, lambda2, lambda3, lambda4,
            ram = ,
            RS = ,
            rs = qglRS(p, param),
-           ##gpd uses GPD parameterisation
+           ## gpd uses GPD parameterisation
            gpd = ,
            GPD = ,
            vsk = ,
@@ -62,15 +62,15 @@ qglFMKL <- function(p, param)
 
   if (lambda3 == 0) {
     if (lambda4 == 0) {
-      quants <- lambda1 + (log(u) - log(1-u))/lambda2
+      quants <- lambda1 + (log(u) - log(1 - u))/lambda2
     } else {
       quants <- lambda1 +
-          (log(u) - ((1 - u)^lambda4 - 1)/lambda4)/lambda2
+                (log(u) - ((1 - u)^lambda4 - 1)/lambda4)/lambda2
     }
   } else {
     if (lambda4 == 0) {
       quants <- lambda1 +
-          ((u^lambda3 - 1)/lambda3 - log(1 - u))/lambda2
+                ((u^lambda3 - 1)/lambda3 - log(1 - u))/lambda2
     } else {
       quants <- lambda1 + ((u^lambda3 - 1)/lambda3
                            - ((1-u)^lambda4 - 1)/lambda4)/lambda2
@@ -123,7 +123,7 @@ qglVSK <- function(p, param)
         quants <- alpha + pbeta*( -delta*((1 - u)^lambda - 1)/lambda)
       } else {
         quants <- alpha + pbeta*((1 - delta)*(u^lambda - 1)/lambda -
-                                     delta*((1 - u)^lambda -1)/lambda)
+                  delta*((1 - u)^lambda -1)/lambda)
       }
     }
   }
@@ -149,9 +149,3 @@ qglFMKL5 <- function(p, param, lambda5)
 {
   stop("qglFMKL5 not yet implemented")
 }
-
-
-
-
-
-
