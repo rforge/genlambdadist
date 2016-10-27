@@ -2,7 +2,7 @@ Package: GeneralizedLambda
 Type: Package
 Title: The Generalized Lambda Distribution
 Version: 0.1-0
-Date: 2016-06-07
+Date: 2016-10-26
 Author: Jeong Kim <jkim831@aucklanduni.ac.nz>
 Maintainer: David Scott <d.scott@auckland.ac.nz>
 Depends: R (>= 3.0.0)

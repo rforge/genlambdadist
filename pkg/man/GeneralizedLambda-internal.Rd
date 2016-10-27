@@ -1,19 +1,13 @@
 \name{GeneralizedLambda-internal}
-\alias{qgl}
 \alias{qglFMKL}
 \alias{qglRS}
 \alias{qglVSK}
 \alias{qglAS}
 \alias{qglFMKL5}
-\alias{glCheckPars}
-\alias{glCheckParsFMKL}
-\alias{glCheckParsRS}
-\alias{glCheckParsVSK}
-\alias{glCheckParsAS}
-\alias{glCheckParsFMKL5}
 \alias{glCheckParsErrorMessage}
-\alias{rgl}
-\alias{pgl}
+\alias{gl_fm5_distfunc}
+\alias{gl_fmkl_distfunc}
+\alias{gl_rs_distfunc}
 
 
 \title{Internal Generalized Lambda Functions}
