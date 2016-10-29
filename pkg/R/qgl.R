@@ -1,4 +1,4 @@
-qgl <- function(p, lambda1, lambda2, lambda3, lambda4,
+qgl <- function(p, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
                 param = c(lambda1, lambda2, lambda3, lambda4),
                 version = "FMKL", lambda5 = NULL,
                 lower.tail = TRUE)
@@ -21,32 +21,32 @@ qgl <- function(p, lambda1, lambda2, lambda3, lambda4,
            freimer = ,
            frm = ,
            fmkl = ,
-           FMKL = qglFMKL(p, param),
+           FMKL = .qglFMKL(p, param),
            ## Ramberg & Schmeiser
            ramberg = ,
            ram = ,
            RS = ,
-           rs = qglRS(p, param),
+           rs = .qglRS(p, param),
            ## gpd uses GPD parameterisation
            gpd = ,
            GPD = ,
            vsk = ,
-           VSK = qglVSK(p, param),
+           VSK = .qglVSK(p, param),
            ## Asymmetry-steepness
            asymmetry = ,
            as = ,
-           AS = qglAS(p, param),
+           AS = .qglAS(p, param),
            ## Five parameter version
            fm5 = ,
            FM5 = ,
            fmkl5 = ,
-           FMKL5 = qglFMKL5(param, lambda5),
+           FMKL5 = .qglFMKL5(param, lambda5),
            stop("Error: version not recognised, check documentation")
            )
   result
 }
 
-qglFMKL <- function(p, param)
+.qglFMKL <- function(p, param)
 {
 
   lambda4 <- param[4]
@@ -87,7 +87,7 @@ qglFMKL <- function(p, param)
 }
 ## end of FMKL
 
-qglRS <- function(p, param)
+.qglRS <- function(p, param)
 {
   u <- p
 
@@ -100,7 +100,7 @@ qglRS <- function(p, param)
   quants
 }
 
-qglVSK <- function(p, param)
+.qglVSK <- function(p, param)
 {
 
   ## param is a parameter containining (alpha,beta,lambda,delta)
@@ -134,7 +134,7 @@ qglVSK <- function(p, param)
 
 }
 
-qglAS <- function(p, param)
+.qglAS <- function(p, param)
 {
   med <- param[1]
   iqr <- param[2]
@@ -145,7 +145,7 @@ qglAS <- function(p, param)
 }
 
 
-qglFMKL5 <- function(p, param, lambda5)
+.qglFMKL5 <- function(p, param, lambda5)
 {
   stop("qglFMKL5 not yet implemented")
 }

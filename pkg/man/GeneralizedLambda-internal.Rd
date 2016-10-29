@@ -1,14 +1,8 @@
 \name{GeneralizedLambda-internal}
-\alias{qglFMKL}
-\alias{qglRS}
-\alias{qglVSK}
-\alias{qglAS}
-\alias{qglFMKL5}
 \alias{glCheckParsErrorMessage}
 \alias{gl_fm5_distfunc}
 \alias{gl_fmkl_distfunc}
 \alias{gl_rs_distfunc}
-\alias{dqgl}
 
 
 \title{Internal Generalized Lambda Functions}

@@ -1,5 +1,6 @@
 \name{GeneralizedLambda}
 \alias{dgl}
+\alias{dqgl}
 \alias{pgl}
 \alias{qgl}
 \alias{rgl}
@@ -23,12 +24,16 @@ dgl(x, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
     version = "FMKL", lambda5 = NULL,
     inverse.eps = .Machine$double.eps, max.iterations = 500)
 
+dqgl(p, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
+     param = c(lambda1, lambda2, lambda3, lambda4),
+     version = "FMKL", lambda5 = NULL)
+
 pgl(q, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
     param = c(lambda1, lambda2, lambda3, lambda4),
     version = "FMKL", lambda5 = NULL,
     inverse.eps = .Machine$double.eps, max.iterations = 500)
 
-qgl(p, lambda1, lambda2, lambda3, lambda4,
+qgl(p, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
     param = c(lambda1, lambda2, lambda3, lambda4),
     version = "FMKL", lambda5 = NULL, lower.tail = TRUE)
 
@@ -134,6 +139,10 @@ and \eqn{-1 \leq \lambda_5 \leq 1}{-1 <= lambda5 <= 1}.
   quantile function, using the Newton-Raphson method.
 }
 \value{
+  \code{dgl} gives the density (based on the quantile density and a
+  numerical solution to \eqn{F^{-1}(u)=x}{F inv (u)=x}),
+
+  \code{qdgl} gives the quantile density,
 
   \code{pgl} gives the distribution function (based on a numerical
 	solution to \eqn{F^{-1}(u) = x}{F inv (u) = x}),
