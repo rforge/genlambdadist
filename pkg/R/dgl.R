@@ -12,6 +12,7 @@ dgl <- function(x, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
   if (case == "error")
     stop(errMessage)
 
+  param <- as.numeric(param)
   ## calculate u=F(x) numerically, then use qdgl
   ## Unless x is outside the range, then density should be zero
   extreme <- qgl(c(inverse.eps, 1 - inverse.eps),
@@ -44,6 +45,7 @@ dqgl <- function(p, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
   if (case == "error")
     stop(errMessage)
 
+  param <- as.numeric(param)
   result <- switch(param,
                    ## Different tests apply for each parameterisation
                    freimer =,  # allows for alternate expressions

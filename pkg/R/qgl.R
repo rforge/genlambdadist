@@ -15,6 +15,7 @@ qgl <- function(p, lambda1 = 0, lambda2 = 1, lambda3 = 1, lambda4 = 1,
   if (case == "error")
     stop(errMessage)
 
+  param <- as.numeric(param)
   result <-
     switch(version,
            ## allows for alternate expressions
